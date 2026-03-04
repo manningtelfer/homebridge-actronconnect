@@ -4,76 +4,23 @@
   "singular": true,
   "schema": {
     "type": "object",
+    "required": ["email", "password"],
     "properties": {
       "name": {
         "title": "Name",
         "type": "string",
-        "default": "Homebridge Actronair"
+        "default": "Air Conditioning"
       },
-      "accessories": {
-        "type": "array",
-        "title": "Accessories",
-        "default": [],
-        "items": {
-          "$ref": "#/$defs/accessory"
-        }
-      }
-    },
-    "$defs": {
-      "accessory": {
-        "type": "object",
-        "required": [
-          "name",
-          "ip",
-          "mac",
-          "device_token",
-          "user_token",
-          "temp_key",
-          "zones"
-        ],
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "Name of the accessory",
-            "default": "Air Conditioning"
-          },
-          "ip": {
-            "type": "string",
-            "description": "IP address of the accessory (local network only)"
-          },
-          "mac": {
-            "type": "string",
-            "description": "MAC address of the accessory (local network only)"
-          },
-          "device_token": {
-            "type": "string",
-            "description": "Device token of the accessory"
-          },
-          "user_token": {
-            "type": "string",
-            "description": "Secret user token of the accessory"
-          },
-          "zones": {
-            "type": "array",
-            "title": "Zones",
-            "default": [],
-            "items": {
-              "$ref": "#/$defs/zone"
-            }
-          }
-        }
+      "email": {
+        "title": "Email",
+        "type": "string",
+        "description": "ActronAir account email address",
+        "format": "email"
       },
-      "zone": {
-        "type": "object",
-        "required": ["name", "index"],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "index": {
-            "type": "number"
-          }
-        }
+      "password": {
+        "title": "Password",
+        "type": "string",
+        "description": "ActronAir account password"
       }
     }
   }

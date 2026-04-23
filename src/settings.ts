@@ -6,4 +6,4 @@ export const PLATFORM_NAME = 'Homebridge Actronair';
 /**
  * This must match the name of your plugin as defined the package.json
  */
-export const PLUGIN_NAME = 'homebridge-actronair-alt';
+export const PLUGIN_NAME = 'homebridge-actronair';

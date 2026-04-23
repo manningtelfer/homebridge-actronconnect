@@ -1,8 +1,8 @@
 {
   "private": false,
   "displayName": "Homebridge Actronair",
-  "name": "homebridge-actronair-alt",
-  "version": "5.0.0",
+  "name": "homebridge-actronair",
+  "version": "5.0.1",
   "description": "Homebridge plugin for actron air conditioners",
   "license": "Apache-2.0",
   "repository": {
